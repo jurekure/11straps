@@ -1,0 +1,27 @@
+doctype html
+html#myPageTop(lang='en')
+  head
+    include includes/head-links.pug
+  body#myPage(data-spy='scroll' data-target='.navbar' data-offset='60')
+   
+    include _includes/header.pug
+
+    // Container (About Section)
+    include _includes/pug/about.pug
+    // Container (Services Section)
+    include _includes/pug/storitve.pug
+    // Container (Portfolio Section)
+    include _includes/pug/portfolio.pug
+    // Container (Contact Section)
+    include _includes/pug/contacts.pug
+
+    // Container (FOOTER)
+    footer.container-fluid.text-center
+      a(href='#myPageTop' title='To Top')
+        i.bi.bi-chevron-up
+      p
+        a(href='http://jurep.com' title='Portfolio') Made by JureP
+
+    // JavaScript loading - pogruntati zakaj commentet links ne delajo
+    script(src="/jquery/dist/jquery.min.js")
+    script(type="module" src="/js/starter.js")
